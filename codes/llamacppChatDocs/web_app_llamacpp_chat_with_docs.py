@@ -26,7 +26,7 @@ st.set_page_config(layout="wide", page_title="LlamaCPP AIO chat with documents")
 def create_embeddings():   
 # Set HF API token  and HF repo
     from langchain_community.embeddings import LlamaCppEmbeddings
-    embpath = "/media/rafsunsheikh/10784ce9-f796-443d-b973-fe6ae114c687/home/Study/Projects/learning_llm/codes/llamacppChatDocs/models/all-MiniLM-L6-v2.F16.gguf"
+    embpath = "/file_path/learning_llm/codes/llamacppChatDocs/models/all-MiniLM-L6-v2.F16.gguf"
     embeddings = LlamaCppEmbeddings(model_path=embpath)
     print('loading all-MiniLM-L6-v2.F16.gguf with LlamaCPP...')
     return embeddings
@@ -36,7 +36,7 @@ def create_chat():
 # Set HF API token  and HF repo
     from llama_cpp import Llama
     qwen05b = Llama(
-                model_path='/media/rafsunsheikh/10784ce9-f796-443d-b973-fe6ae114c687/home/Study/Projects/learning_llm/codes/llamacppChatDocs/models/qwen2-0_5b-instruct-q8_0.gguf',
+                model_path='/file_path/learning_llm/codes/llamacppChatDocs/models/qwen2-0_5b-instruct-q8_0.gguf',
                 n_gpu_layers=0,
                 temperature=0.1,
                 top_p = 0.5,
